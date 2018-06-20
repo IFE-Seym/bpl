@@ -1,1 +1,1 @@
-# bpl [B.P Logistics]
+# bpl [B.P]
