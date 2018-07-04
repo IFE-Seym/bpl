@@ -1,0 +1,75 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* profile_bp_logistics
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-18 08:29+0000\n"
+"PO-Revision-Date: 2018-06-18 08:29+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: profile_bp_logistics
+#: model:ir.model.fields,field_description:profile_bp_logistics.field_stock_move_line_lot_expiration_date
+msgid "Lot End of Life Date"
+msgstr "Verwendbar bis"
+
+#. module: profile_bp_logistics
+#: code:addons/profile_bp_logistics/models/stock_move_line.py:59
+#, python-format
+msgid "No negative quantities allowed"
+msgstr "Rückstandsmengen nicht erlaubt"
+
+#. module: profile_bp_logistics
+#: model:ir.model,name:profile_bp_logistics.model_stock_move_line
+msgid "Packing Operation"
+msgstr "Packvorgang"
+
+#. module: profile_bp_logistics
+#: model:ir.model,name:profile_bp_logistics.model_stock_move
+msgid "Stock Move"
+msgstr "Lagerbuchung"
+
+#. module: profile_bp_logistics
+#: model:ir.model.fields,field_description:profile_bp_logistics.field_stock_move_picking_type_code
+msgid "Type of Operation"
+msgstr "Vorgangstyp"
+
+#. module: profile_bp_logistics
+#: model:ir.ui.view,arch_db:profile_bp_logistics.view_stock_move_line_operation_form_ext
+msgid "Unit of Measure"
+msgstr "Mengeneinheit"
+
+#. module: profile_bp_logistics
+#: code:addons/profile_bp_logistics/models/stock_move_line.py:57
+#, python-format
+msgid "You need to supply a lot/serial number for %s."
+msgstr "Sie müssen eine Los-/Seriennummer für %s angeben."
+
+#. module: profile_bp_logistics
+#: model:ir.model.fields,field_description:profile_bp_logistics.field_stock_move_alt_ordered_qty
+#: model:ir.model.fields,field_description:profile_bp_logistics.field_stock_picking_alt_ordered_qty
+msgid "Qty Ordered"
+msgstr "Bestellte Menge"
+
+#. module: profile_bp_logistics
+#: model:ir.ui.view,arch_db:profile_bp_logistics.report_delivery_document
+msgid "<strong>Destination</strong>"
+msgstr "<strong>Zielort</strong>"
+
+#. module: profile_bp_logistics
+#: model:ir.ui.view,arch_db:profile_bp_logistics.report_delivery_document
+msgid "Source"
+msgstr "Quellort"
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.report_delivery_document
+msgid "<strong>Delivered Quantity</strong>"
+msgstr "<strong>Gelieferte Menge</strong>"
+
