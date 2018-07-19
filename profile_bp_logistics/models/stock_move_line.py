@@ -43,6 +43,9 @@ class StockMoveLine(models.Model):
                                     {'name': ml.lot_name, 'product_id': ml.product_id.id , 'life_date': ml.lot_expiration_date}
                                 )
                                 ml.write({'lot_id': lot.id})
+                        if picking_type_id.use_create_lots and picking_type_id.use_existing_lots:
+                            if ml.lot_id:
+                                ml.lot_id.write({'life_date': ml.lot_expiration_date})
                         elif not picking_type_id.use_create_lots and not picking_type_id.use_existing_lots:
                             # If the user disabled both `use_create_lots` and `use_existing_lots`
                             # checkboxes on the picking type, he's allowed to enter tracked
