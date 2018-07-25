@@ -3,14 +3,21 @@
 
     <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
 
+        <xpath expr="//span[@t-field='o.name']" position="before">
+            <t t-if="o.picking_type_code == 'outgoing'">
+                <strong>DUS: Warenausgang</strong>
+            </t>
+        </xpath>
+
         <xpath expr="//table[@t-if='not o.move_line_ids']/thead/tr/th[2]" position="after">
             <t t-if="o.picking_type_id.code != 'incoming'">
                 <th>Source</th>
             </t>
-            <th>
-                <strong>Destination</strong>
-            </th>
+            <!--<th>-->
+            <!--<strong>Destination</strong>-->
+            <!--</th>-->
         </xpath>
+
 
         <xpath expr="//table[@t-if='not o.move_line_ids']/tbody/tr" position="replace">
             <tr t-foreach="o.move_lines" t-as="move">
@@ -31,9 +38,9 @@
                         <span t-field="move.location_id.display_name"/>
                     </td>
                 </t>
-                <td>
-                    <span t-field="move.location_dest_id"/>
-                </td>
+                <!--<td>-->
+                <!--<span t-field="move.location_dest_id"/>-->
+                <!--</td>-->
             </tr>
         </xpath>
 
@@ -41,9 +48,16 @@
             <t t-if="o.picking_type_id.code != 'incoming'">
                 <th>Source</th>
             </t>
-            <th>
-                <strong>Destination</strong>
-            </th>
+            <!--<th>-->
+            <!--<strong>Destination</strong>-->
+            <!--</th>-->
+        </xpath>
+
+        <xpath expr="//table[@t-if='not o.move_line_ids']/thead/tr/th[2]" position="replace">
+        </xpath>
+
+        <xpath expr="//table[@t-if='not o.move_line_ids']/thead/tr/th[4]" position="after">
+            <strong>Bestellte Menge</strong>
         </xpath>
 
         <xpath expr="//table[@t-if='o.move_line_ids']/tbody/tr" position="replace">
@@ -68,17 +82,22 @@
                                     </t>
                                 </td>
                                 <td name="lot_qty">
-                                    <t t-if="move_line.qty_done and move_line.move_id.alt_ordered_qty == 0">
+                                    <t t-if="move_line.qty_done">
                                         <span t-field="move_line.qty_done"/>
-                                    </t>
-                                    <t t-if="move_line.move_id.alt_ordered_qty != 0">
-                                        <span t-field="move_line.move_id.alt_ordered_qty"/>
                                     </t>
                                 </td>
                             </tr>
                         </table>
                     </td>
                 </t>
+                <t t-if="o.picking_type_id.code != 'incoming'">
+                    <td>
+                        <span t-field="move_line.location_id.display_name"/>
+                    </td>
+                </t>
+                <!--<td>-->
+                <!--<span t-field="move_line.location_dest_id"/>-->
+                <!--</td>-->
                 <td class="text-center">
                     <t t-if="move_line.move_id.alt_ordered_qty == 0">
                         <span t-field="move_line.qty_done"/>
@@ -88,14 +107,6 @@
                     </t>
                     <span t-field="move_line.product_uom_id"/>
                 </td>
-                <t t-if="o.picking_type_id.code != 'incoming'">
-                   <td>
-                        <span t-field="move_line.location_id.display_name"/>
-                   </td>
-                </t>
-                <td>
-                    <span t-field="move_line.location_dest_id"/>
-                </td>
                 <td class="text-right" t-if="move_line.state == 'done'">
                     <t t-if="move_line.ordered_qty != move_line.qty_done">
                         <t t-set="backorder" t-value="True"/>
@@ -104,6 +115,32 @@
                     <span t-field="move_line.product_uom_id"/>
                 </td>
             </tr>
+        </xpath>
+
+        <xpath expr="//div[@class='page']" positon='inside'>
+            <table>
+                <tr>
+                    <th style="font-size:12px;text-align:left">
+                        Vorberteit durch:
+                    </th>
+                    <th></th>
+                    <th style="font-size:12px;text-align:left">
+                        Geprüft durch:
+                    </th>
+                </tr>
+                <tr>
+                    <td width='150px' height='30px' style="border-bottom: 1px solid #000;"></td>
+                    <td width='50px'></td>
+                    <td width='150px' style="border-bottom: 1px solid #000;"></td>
+                </tr>
+
+                <tr>
+                    <td style="font-size:12px;">Datum/Untershrift</td>
+                    <td></td>
+                    <td style="font-size:12px;">Datum/Untershrift</td>
+                </tr>
+            </table>
+
         </xpath>
 
     </template>
