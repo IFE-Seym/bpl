@@ -68,8 +68,8 @@
                                     </t>
                                 </td>
                                 <td name="lot_qty">
-                                    <t t-if="move_line.product_qty and move_line.move_id.alt_ordered_qty == 0">
-                                        <span t-field="move_line.product_qty"/>
+                                    <t t-if="move_line.qty_done and move_line.move_id.alt_ordered_qty == 0">
+                                        <span t-field="move_line.qty_done"/>
                                     </t>
                                     <t t-if="move_line.move_id.alt_ordered_qty != 0">
                                         <span t-field="move_line.move_id.alt_ordered_qty"/>
