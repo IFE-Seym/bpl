@@ -15,7 +15,6 @@
         'sale_management',
         'account',
         'stock',
-        'purchase',
         'mail'
     ],
     'data': [
