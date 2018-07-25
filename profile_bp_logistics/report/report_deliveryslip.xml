@@ -9,7 +9,7 @@
             </t>
         </xpath>
 
-        <xpath expr="//table[@t-if='not o.move_line_ids']/thead/tr/th[2]" position="after">
+        <xpath expr="//table[@t-if='not o.move_line_ids']/thead/tr/th[1]" position="after">
             <t t-if="o.picking_type_id.code != 'incoming'">
                 <th>Source</th>
             </t>
@@ -24,6 +24,11 @@
                 <td>
                     <span t-field="move.product_id"/>
                 </td>
+                <t t-if="o.picking_type_id.code != 'incoming'">
+                    <td>
+                        <span t-field="move.location_id.display_name"/>
+                    </td>
+                </t>
                 <td>
                     <t t-if="move.alt_ordered_qty != 0">
                         <span t-field="move.alt_ordered_qty"/>
@@ -33,18 +38,13 @@
                     </t>
                     <span t-field="move.product_uom"/>
                 </td>
-                <t t-if="o.picking_type_id.code != 'incoming'">
-                    <td>
-                        <span t-field="move.location_id.display_name"/>
-                    </td>
-                </t>
                 <!--<td>-->
                 <!--<span t-field="move.location_dest_id"/>-->
                 <!--</td>-->
             </tr>
         </xpath>
 
-        <xpath expr="//table[@t-if='o.move_line_ids']/thead/tr/th[3]" position="after">
+        <xpath expr="//table[@t-if='o.move_line_ids']/thead/tr/th[2]" position="after">
             <t t-if="o.picking_type_id.code != 'incoming'">
                 <th>Source</th>
             </t>
@@ -53,12 +53,7 @@
             <!--</th>-->
         </xpath>
 
-        <xpath expr="//table[@t-if='not o.move_line_ids']/thead/tr/th[2]" position="replace">
-        </xpath>
-
-        <xpath expr="//table[@t-if='not o.move_line_ids']/thead/tr/th[4]" position="after">
-            <strong>Bestellte Menge</strong>
-        </xpath>
+        
 
         <xpath expr="//table[@t-if='o.move_line_ids']/tbody/tr" position="replace">
             <tr t-foreach="o.move_line_ids" t-as="move_line">
