@@ -21,9 +21,6 @@
 
         <xpath expr="//table[@t-if='not o.move_line_ids']/tbody/tr" position="replace">
             <tr t-foreach="o.move_lines" t-as="move">
-                <t t-if="move_line.ordered_qty != move_line.qty_done">
-                        <t t-set="backorder" t-value="True"/>
-                    </t>
                 <td>
                     <span t-field="move.product_id"/>
                 </td>
@@ -105,9 +102,9 @@
                     <span t-field="move_line.product_uom_id"/>
                 </td>
                 <td class="text-right" t-if="move_line.state == 'done'">
-                    <!--<t t-if="move_line.ordered_qty != move_line.qty_done">-->
-                        <!--<t t-set="backorder" t-value="True"/>-->
-                    <!--</t>-->
+                    <t t-if="move_line.move_id.ordered_qty != move_line.qty_done">
+                        <t t-set="backorder" t-value="True"/>
+                    </t>
                     <span t-field="move_line.qty_done"/>
                     <span t-field="move_line.product_uom_id"/>
                 </td>
