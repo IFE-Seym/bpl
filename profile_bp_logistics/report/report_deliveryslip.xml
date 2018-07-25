@@ -53,7 +53,6 @@
             <!--</th>-->
         </xpath>
 
-        
 
         <xpath expr="//table[@t-if='o.move_line_ids']/tbody/tr" position="replace">
             <tr t-foreach="o.move_line_ids" t-as="move_line">
@@ -113,28 +112,19 @@
         </xpath>
 
         <xpath expr="//div[@class='page']" positon='inside'>
-            <table>
-                <tr>
-                    <th style="font-size:12px;text-align:left">
-                        Vorberteit durch:
-                    </th>
-                    <th></th>
-                    <th style="font-size:12px;text-align:left">
-                        Geprüft durch:
-                    </th>
-                </tr>
-                <tr>
-                    <td width='150px' height='30px' style="border-bottom: 1px solid #000;"></td>
-                    <td width='50px'></td>
-                    <td width='150px' style="border-bottom: 1px solid #000;"></td>
-                </tr>
+            <div class='row' style="margin-top:200px">
+                <div class="col-xs-2" style="font-weight:bold;font-size:12px;">Vorberteit durch:</div>
+                <div class="col-xs-2" style="font-weight:bold;font-size:12px;margin-left: 30px;">Geprüft durch:</div>
+                <br></br>
+                <div class="col-xs-2" style="height: 30px;margin-left: 15px;border-bottom: 1px solid #000;"></div>
+                <div class="col-xs-2" style="height: 30px;margin-left: 30px;border-bottom: 1px solid #000;"></div>
+                <br></br>
+                <br></br>
+                <div class="col-xs-2" style="margin-top:-3px;font-size:12px;">Datum/Untershrift</div>
+                <div class="col-xs-2" style="margin-top:-3px;font-size:12px;margin-left: 30px;">Datum/Untershrift</div>
 
-                <tr>
-                    <td style="font-size:12px;">Datum/Untershrift</td>
-                    <td></td>
-                    <td style="font-size:12px;">Datum/Untershrift</td>
-                </tr>
-            </table>
+            </div>
+  
 
         </xpath>
 
