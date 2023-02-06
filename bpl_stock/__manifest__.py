@@ -25,4 +25,5 @@
         'report/report_deliveryslip.xml'
     ],
     'installable': True,
+    'auto_install': True,
 }
