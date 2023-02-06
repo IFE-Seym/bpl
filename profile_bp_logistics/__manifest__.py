@@ -18,16 +18,16 @@
         'mail'
     ],
     'data': [
-        'views/product_template_view_ext.xml',
-        'views/stock_move_line_view_ext.xml',
-        'views/stock_picking_view_ext.xml',
+       # 'views/product_template_view_ext.xml',
+       # 'views/stock_move_line_view_ext.xml',
+       # 'views/stock_picking_view_ext.xml',
 
-        'report/report_deliveryslip.xml',
+       # 'report/report_deliveryslip.xml',
 
-        'security/group_security.xml',
-        'security/ir.model.access.csv',
+       # 'security/group_security.xml',
+       # 'security/ir.model.access.csv',
     ],
     'sequence': 666,
-    'installable': False,
+    'installable': True,
     'application': False,
 }
