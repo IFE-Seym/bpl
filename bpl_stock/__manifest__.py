@@ -16,13 +16,13 @@
         'product_expiry'
     ],
     'data': [
+        'security/group_security.xml',
+        'security/ir.model.access.csv',
+
         'views/product_template_view_ext.xml',
         'views/stock_picking_view_ext.xml',
         'views/stock_move_line_views.xml',
-        'report/report_deliveryslip.xml',
-
-        'security/group_security.xml',
-        'security/ir.model.access.csv',
+        'report/report_deliveryslip.xml'
     ],
     'installable': True,
 }
