@@ -5,7 +5,7 @@
     'website': 'https://www.hucke-media.de/',
     'licence': 'AGPL-3',
     'summary': 'Customisations for B.P. Logistics',
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.0.1",
     'description': """
     """,
     'depends': [

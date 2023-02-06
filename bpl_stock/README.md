@@ -11,6 +11,6 @@ Addon needs no configuration
 ## History
 
 features introduced in version 15.0.1.0.0: First release of migrated odoo 15 version.
-
+fetaures introduced in version 15.0.1.0.1: Fix issue with special/customer creation & xml_id call.
 ## Maintainer
 This module is maintained by Hucke Media Gmbh & Co KG.
