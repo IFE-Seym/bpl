@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_product_product_group_user_customer,product.product.user.customer,product.model_product_product,profile_bp_logistics.group_user_customer,1,0,0,0
-access_product_template_group_user_customer,product.template.user.customer,product.model_product_template,profile_bp_logistics.group_user_customer,1,0,0,0
-access_stock_move_group_user_customer,stock.move group_user_customer,stock.model_stock_move,profile_bp_logistics.group_user_customer,1,1,1,1
-access_stock_production_lot_group_user_customer,stock.production.lot group_user_customer,stock.model_stock_production_lot,profile_bp_logistics.group_user_customer,1,0,0,0
+access_product_product_group_user_customer,product.product.user.customer,product.model_product_product,bpl_stock.group_user_customer,1,0,0,0
+access_product_template_group_user_customer,product.template.user.customer,product.model_product_template,bpl_stock.group_user_customer,1,0,0,0
+access_stock_move_group_user_customer,stock.move group_user_customer,stock.model_stock_move,bpl_stock.group_user_customer,1,1,1,1
+access_stock_production_lot_group_user_customer,stock.production.lot group_user_customer,stock.model_stock_production_lot,bpl_stock.group_user_customer,1,0,0,0

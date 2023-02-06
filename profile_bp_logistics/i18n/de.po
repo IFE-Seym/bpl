@@ -1,75 +1,74 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* profile_bp_logistics
+# 	* bpl_stock
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0+e\n"
+"Project-Id-Version: Odoo Server 15.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-18 08:29+0000\n"
-"PO-Revision-Date: 2018-06-18 08:29+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2023-02-03 10:35+0000\n"
+"PO-Revision-Date: 2023-02-03 10:35+0000\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: profile_bp_logistics
-#: model:ir.model.fields,field_description:profile_bp_logistics.field_stock_move_line_lot_expiration_date
-msgid "Lot End of Life Date"
-msgstr "Verwendbar bis"
+#. module: bpl_stock
+#: model_terms:ir.ui.view,arch_db:bpl_stock.report_delivery_document
+msgid "<strong>DUS: Warenausgang</strong>"
+msgstr ""
 
-#. module: profile_bp_logistics
-#: code:addons/profile_bp_logistics/models/stock_move_line.py:59
-#, python-format
-msgid "No negative quantities allowed"
-msgstr "Rückstandsmengen nicht erlaubt"
+#. module: bpl_stock
+#: model_terms:ir.ui.view,arch_db:bpl_stock.report_delivery_document
+msgid "Datum/Untershrift"
+msgstr ""
 
-#. module: profile_bp_logistics
-#: model:ir.model,name:profile_bp_logistics.model_stock_move_line
-msgid "Packing Operation"
-msgstr "Packvorgang"
+#. module: bpl_stock
+#: model_terms:ir.ui.view,arch_db:bpl_stock.report_delivery_document
+msgid "Geprüft durch:"
+msgstr ""
 
-#. module: profile_bp_logistics
-#: model:ir.model,name:profile_bp_logistics.model_stock_move
-msgid "Stock Move"
-msgstr "Lagerbuchung"
+#. module: bpl_stock
+#: model:ir.model,name:bpl_stock.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Produktbewegungen (Lagerbewegung)"
 
-#. module: profile_bp_logistics
-#: model:ir.model.fields,field_description:profile_bp_logistics.field_stock_move_picking_type_code
-msgid "Type of Operation"
-msgstr "Vorgangstyp"
-
-#. module: profile_bp_logistics
-#: model:ir.ui.view,arch_db:profile_bp_logistics.view_stock_move_line_operation_form_ext
-msgid "Unit of Measure"
-msgstr "Mengeneinheit"
-
-#. module: profile_bp_logistics
-#: code:addons/profile_bp_logistics/models/stock_move_line.py:57
-#, python-format
-msgid "You need to supply a lot/serial number for %s."
-msgstr "Sie müssen eine Los-/Seriennummer für %s angeben."
-
-#. module: profile_bp_logistics
-#: model:ir.model.fields,field_description:profile_bp_logistics.field_stock_move_alt_ordered_qty
-#: model:ir.model.fields,field_description:profile_bp_logistics.field_stock_picking_alt_ordered_qty
+#. module: bpl_stock
+#: model:ir.model.fields,field_description:bpl_stock.field_stock_move__alt_ordered_qty
+#: model:ir.model.fields,field_description:bpl_stock.field_stock_move_line__alt_ordered_qty
+#: model:ir.model.fields,field_description:bpl_stock.field_stock_move_line__is_picking_alt_ordered_qty
+#: model:ir.model.fields,field_description:bpl_stock.field_stock_picking__alt_ordered_qty
 msgid "Qty Ordered"
 msgstr "Bestellte Menge"
 
-#. module: profile_bp_logistics
-#: model:ir.ui.view,arch_db:profile_bp_logistics.report_delivery_document
-msgid "<strong>Destination</strong>"
-msgstr "<strong>Zielort</strong>"
-
-#. module: profile_bp_logistics
-#: model:ir.ui.view,arch_db:profile_bp_logistics.report_delivery_document
+#. module: bpl_stock
+#: model_terms:ir.ui.view,arch_db:bpl_stock.report_delivery_document
 msgid "Source"
 msgstr "Quellort"
 
-#. module: stock
-#: model:ir.ui.view,arch_db:stock.report_delivery_document
-msgid "<strong>Delivered Quantity</strong>"
-msgstr "<strong>Gelieferte Menge</strong>"
+#. module: bpl_stock
+#: model:res.groups,name:bpl_stock.group_user_customer
+msgid "Special/Customer"
+msgstr ""
 
+#. module: bpl_stock
+#: model:ir.model,name:bpl_stock.model_stock_move
+msgid "Stock Move"
+msgstr "Lagerbewegung"
+
+#. module: bpl_stock
+#: model:ir.model,name:bpl_stock.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: bpl_stock
+#: model:ir.model.fields,field_description:bpl_stock.field_stock_move__picking_type_code
+msgid "Type of Operation"
+msgstr ""
+
+#. module: bpl_stock
+#: model_terms:ir.ui.view,arch_db:bpl_stock.report_delivery_document
+msgid "Vorberteit durch:"
+msgstr ""
