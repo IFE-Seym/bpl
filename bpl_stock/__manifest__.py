@@ -3,7 +3,7 @@
     'author': 'Hucke Media GmbH & Co. KG/IFE GmbH',
     'category': 'Inventory',
     'website': 'https://www.hucke-media.de/',
-    'licence': 'AGPL-3',
+    'license': 'AGPL-3',
     'summary': 'Customisations for B.P. Logistics',
     "version": "15.0.1.0.1",
     'description': """
