@@ -26,7 +26,7 @@
                 </td>
                 <t t-if="o.picking_type_id.code != 'incoming'">
                     <td>
-                        <span t-field="move.location_id.display_name"/>
+                        <span t-field="move_line.location_id.display_name"/>
                     </td>
                 </t>
                 <td>
