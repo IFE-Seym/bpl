@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.view.ext</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <field name="origin" position="after">
+                <field name="alt_ordered_qty"/>
+            </field>
+            <xpath expr="/form/sheet/notebook/page[@name='operations']/field[@name='move_ids_without_package']/tree/field[@name='product_uom_qty']"
+                   position="after">
+                <field name="alt_ordered_qty" attrs="{'column_invisible': [('parent.alt_ordered_qty', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_picking_form_customer_group" model="ir.ui.view">
+        <field name="name">stock.picking.view.ext</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="groups_id" eval="[(6, 0, [ref('bpl_stock.group_user_customer')])]"/>
+        <field name="priority">1000</field>
+        <field name="arch" type="xml">
+             <xpath expr="//div[hasclass('oe_chatter')]" position="replace"/>
+        </field>
+    </record>
+
+</odoo>
